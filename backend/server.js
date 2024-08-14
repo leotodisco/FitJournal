@@ -26,6 +26,4 @@ mongoose.connect(dbUrl)
     
 app.listen(port, async () => {
     console.log(`Server is running on port ${port}`);
-    console.log("chiamata al server effettuata");
-
  });

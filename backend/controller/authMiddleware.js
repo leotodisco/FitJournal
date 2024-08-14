@@ -4,6 +4,9 @@ const jwt = require('jsonwebtoken');
 
 const authMiddleware = express.Router();
 
+/**
+ * TO DO leggere il token dai cookie, ma per ora va bene request
+ */
 const authenticateToken = async (request, response, next) => {
     try {
         const authHeader = request.headers['authorization'];
