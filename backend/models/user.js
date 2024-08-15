@@ -20,7 +20,7 @@ const UserSchema = new mongoose.Schema({
     },
     bodyWeight: {
         type: Number,
-        required: true
+        required: false
     },
     currentWorkoutPlan: {
         type: mongoose.Schema.Types.ObjectId,

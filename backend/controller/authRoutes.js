@@ -9,7 +9,7 @@ const authRouter = express.Router();
 
 authRouter.post('/signin', async (req, res) => {
     try {
-        const { name, surname, email, password, bodyWeight } = req.body;
+        const { name, surname, email, password} = req.body;
 
         bcrypt.hash(password, saltRounds, async (err, hash) => {
             if (err) {
@@ -21,7 +21,6 @@ authRouter.post('/signin', async (req, res) => {
                 surname,
                 email,
                 password: hash,  
-                bodyWeight
             });
 
             await newUsr.save();

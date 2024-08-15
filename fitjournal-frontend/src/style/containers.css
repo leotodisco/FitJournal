@@ -1,0 +1,8 @@
+.main-container {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: rgb(242, 244, 247);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

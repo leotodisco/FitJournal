@@ -1,0 +1,105 @@
+.login-container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    gap:10px;
+    align-items: center;
+}
+
+.left-side-login-page{
+    justify-content: center;    
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    align-items: center;
+}
+
+.left-side-login-page>h1{
+    margin-top: 0;
+    font-size: 70px;    
+    margin-bottom: 0;
+}
+
+.left-side-login-page>h2{    
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.right-side-login-page {
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 55vh;
+    align-items: center;
+    gap: 15px;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.fitJournalInput {
+    width: 320px;
+    height: 45px;
+    border-radius: 3px;   
+    border: 1px solid rgb(221,223,226);
+    padding-left: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+
+.login-submit-button {
+    margin-top: 5px;
+    background-color: rgb(101,181,67);
+    width: 320px;
+    height: 48px;
+    border-radius: 7px;   
+    border: 1px solid rgb(101,181,67);
+    font-size: 20px;
+    font-weight: 600;
+    color:white;
+}
+
+
+
+.login-submit-button:hover {
+    background-color: rgb(87, 162, 57);
+    cursor:pointer;
+}
+
+.divider {
+    color:rgb(221,223,226);
+    width: 320px;
+    border: none;   
+    height: 1px;
+    background-color: rgb(221,223,226);
+}
+
+.text-login-page{
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.register-button {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(65, 133, 38);
+}
+
+.register-button:hover {
+    cursor: pointer;
+}
+
+.name-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10px;
+}
+
+.name-container > input{
+    width:150px
+}
