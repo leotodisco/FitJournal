@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../components/UserProvider';
 import "../style/loginStyle.css"
 
 const LoginPage = () => {
@@ -9,6 +10,7 @@ const LoginPage = () => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate(); 
+    const { setUser } = useContext(UserContext); 
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -23,7 +25,7 @@ const LoginPage = () => {
                   },
                   body: JSON.stringify({ email: email, password: password }),
                   credentials: 'include'
-                });
+            });
 
             if (!response.ok) {
                 throw new Error('Credenziali non valide');
@@ -36,8 +38,25 @@ const LoginPage = () => {
             const cookieName = 'authToken';
             document.cookie = `${cookieName}=${token}; path=/; max-age=7200; secure; samesite=Strict`;
 
+            // Salva l'utente nei cookie
+            const user = {
+                name: data.user.name,
+                surname: data.user.surname,
+                id: data.user.id,
+                email: data.user.email,
+                weight: data.user.weight,
+                currentWorkoutPlan: data.user.currentWorkoutPlan,
+            };
+            console.log("IL CURRENT WOKR ", user.currentWorkoutPlan)
+
+            const cookieNameUser = 'user';
+            document.cookie = `${cookieNameUser}=${encodeURIComponent(JSON.stringify(user))}; path=/; max-age=7200; secure; samesite=Strict`;
+
+            // Aggiorna lo stato dell'utente nel contesto usando context api
+            setUser(user);
+
             setLoading(false);
-            navigate('/'); // Reindirizza all'home page o a una pagina protetta
+            navigate('/'); // vai alla home
         } catch (error) {
             setLoading(false);
             setError(error.message);

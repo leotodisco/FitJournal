@@ -1,0 +1,35 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 15px 15px 15px 15px;
+}
+
+.workout-container {
+    display: flex; /* Dispone gli elementi figli in una riga orizzontale */
+    overflow-x: auto; /* Aggiunge la scrollbar orizzontale se il contenuto è più largo del contenitore */
+    white-space: nowrap; /* Impedisce la rottura del testo e degli elementi su più righe */
+    padding: 10px; /* Spazio interno opzionale */
+}
+
+.workout-container > * {
+    flex: 0 0 auto; /* Impedisce agli elementi di ridursi o espandersi automaticamente */
+    margin-right: 10px; /* Spazio tra gli elementi */
+    /* Altre proprietà per lo stile degli elementi */
+}
+
+
+/* Per WebKit (Chrome, Safari, Edge, ecc.) */
+.workout-container::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+
+.workout-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.workout-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}

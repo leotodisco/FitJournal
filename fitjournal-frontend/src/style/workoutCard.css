@@ -1,0 +1,75 @@
+.workout-card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #92B4A7; 
+    width: 120vh;
+    height: 60vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow-y: auto;  
+    align-items: center;
+    margin-top: 0;
+}
+
+.workout-card-container > h2{
+    margin-bottom: 0;
+    
+}
+
+.workout-card-container > * {
+    flex-shrink: 0;
+}
+
+/* Per WebKit (Chrome, Safari, Edge, ecc.) */
+.workout-card-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.workout-card-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.workout-card-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Per Firefox */
+.workout-card-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.esercizio{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nome-esercizio {
+    width: 70vh;
+    
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.statistiche-esercizio{
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    
+}
+
+.divider-esercizi {
+    margin-top: 0px;
+    color:#2f2f2f;
+    width: 100vh;
+    border: none;   
+    height: 1px;
+    background-color: #2f2f2f;
+}

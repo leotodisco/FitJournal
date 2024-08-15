@@ -4,6 +4,7 @@ const cors = require('cors');
 const authRouter = require('./controller/authRoutes')
 const authMiddleware = require('./controller/authMiddleware');
 const userRouter = require('./controller/userRoutes')
+const workoutRouter = require('./controller/workoutRoutes')
 
 // config
 const app = express();
@@ -22,6 +23,7 @@ app.use('/auth', authRouter);
 // tutte le route da qui in poi hanno il middleware implicitamente
 app.use(authMiddleware);
 app.use('/utente', authMiddleware, userRouter);
+app.use('/workout', authMiddleware, workoutRouter);
 
 mongoose.connect(dbUrl)
     .then(() => console.log('Connessione al db avvenuta con successo'))

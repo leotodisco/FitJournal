@@ -6,9 +6,9 @@ const userRouter = express.Router();
 
 userRouter.post('/addWorkout', async (req, res) => {
     try {
-        const {exercises, userID} = req.body;
+        const {days, userID} = req.body;
     
-        if (!Array.isArray(exercises)) {
+        if (!Array.isArray(days)) {
             return res.status(400).json({ error: 'Send a valid request.' });
         }
 
@@ -18,7 +18,7 @@ userRouter.post('/addWorkout', async (req, res) => {
         }
 
         const workout = new Workout({
-            exercises
+            days
         })
         const newWorkout = await workout.save();
 
