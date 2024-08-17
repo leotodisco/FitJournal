@@ -1,0 +1,12 @@
+.profile-page-container{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    padding-left: 15px;
+    margin-top: 10px;
+    padding-right: 15px;
+}
+
+.titolo-profile-page {
+    padding: 10px;
+}

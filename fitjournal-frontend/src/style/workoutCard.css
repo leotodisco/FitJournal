@@ -13,7 +13,7 @@
 
 .workout-card-container > h2{
     margin-bottom: 0;
-    
+    font-size: 40px;
 }
 
 .workout-card-container > * {
@@ -51,9 +51,8 @@
 }
 
 .nome-esercizio {
-    width: 70vh;
-    
-    font-size: 45px;
+    width: 55vh;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -61,8 +60,11 @@
     width: 30vh;
     display: flex;
     flex-direction: column;
-    gap:5px;
-    
+    gap:5px;   
+}
+
+.statistiche-esercizio>span{
+    font-size: 20px;
 }
 
 .divider-esercizi {

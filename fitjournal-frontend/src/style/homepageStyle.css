@@ -1,28 +1,33 @@
 .home-container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    margin: 15px 15px 15px 15px;
+    height: 90vh;
+    padding-left: 15px;
+    margin-top: 10px;
+    padding-right: 15px;
+}
+
+.titolo-home-page {
+    padding: 10px;
 }
 
 .workout-container {
-    display: flex; /* Dispone gli elementi figli in una riga orizzontale */
-    overflow-x: auto; /* Aggiunge la scrollbar orizzontale se il contenuto è più largo del contenitore */
-    white-space: nowrap; /* Impedisce la rottura del testo e degli elementi su più righe */
-    padding: 10px; /* Spazio interno opzionale */
+    display: flex; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 10px; 
 }
 
 .workout-container > * {
-    flex: 0 0 auto; /* Impedisce agli elementi di ridursi o espandersi automaticamente */
-    margin-right: 10px; /* Spazio tra gli elementi */
-    /* Altre proprietà per lo stile degli elementi */
+    flex: 0 0 auto; 
+    margin-right: 10px; 
 }
 
 
 /* Per WebKit (Chrome, Safari, Edge, ecc.) */
 .workout-container::-webkit-scrollbar {
     width: 8px;
-    height: 4px;
+    height: 2px;
 }
 
 .workout-container::-webkit-scrollbar-thumb {

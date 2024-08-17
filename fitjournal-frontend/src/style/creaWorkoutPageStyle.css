@@ -1,0 +1,8 @@
+.crea-workout-page-container{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    padding-left: 15px;
+    margin-top: 10px;
+    padding-right: 15px;
+}

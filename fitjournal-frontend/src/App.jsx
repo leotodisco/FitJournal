@@ -1,7 +1,10 @@
+import Menu from './components/Menu.jsx';
 
+import RegistrationPage from './pages/RegistrationPage.jsx';
 import LoginPage from './pages/LoginPage';
 import Homepage from './pages/Homepage';
-import RegistrationPage from './pages/RegistrationPage.jsx';
+import ProfilePage from './pages/ProfilePage.jsx';
+import CreaWorkoutPage from './pages/CreaWorkoutPage.jsx';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
@@ -20,7 +23,9 @@ function App() {
             <Route path="/signin" element={<RegistrationPage />} />
             
             {/* Proteggi tutte le altre rotte con ProtectedRoute */}
-            <Route path="/" element={<ProtectedRoute element={<Homepage />} />} />
+            <Route path="/" element={<ProtectedRoute element={<> <Menu /> <Homepage /> </>} />} />
+            <Route path="/creaWorkout" element={<ProtectedRoute element={<> <Menu /> <CreaWorkoutPage /> </>} />} />
+            <Route path="/profile" element={<ProtectedRoute element={<> <Menu /> <ProfilePage /> </>} />} />
             
           </Routes>
         </Router>

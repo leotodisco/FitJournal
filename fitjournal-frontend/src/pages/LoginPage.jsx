@@ -47,7 +47,6 @@ const LoginPage = () => {
                 weight: data.user.weight,
                 currentWorkoutPlan: data.user.currentWorkoutPlan,
             };
-            console.log("IL CURRENT WOKR ", user.currentWorkoutPlan)
 
             const cookieNameUser = 'user';
             document.cookie = `${cookieNameUser}=${encodeURIComponent(JSON.stringify(user))}; path=/; max-age=7200; secure; samesite=Strict`;

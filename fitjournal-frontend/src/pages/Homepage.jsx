@@ -86,7 +86,9 @@ const Homepage = () => {
 
     return (
         <div className='home-container'>
-            <h1>Ciao, {user.name} 🤙🏻</h1>
+            <div className='titolo-home-page'>
+                <h2>I tuoi allenamenti 💪🏻</h2>
+            </div>
 
             <div className='workout-container'>
             {!workoutPlan || !workoutPlan.days || workoutPlan.days.length === 0 ? 
@@ -96,7 +98,7 @@ const Homepage = () => {
                 (
                     workoutPlan.days.map((day, index) => (
                         <>
-                        <WorkoutCard day={day} index={index}/>
+                        <WorkoutCard day={day} index={index} idPianoDiAllenamento={workoutPlan._id} />
                         </>
                     ))
                 )
