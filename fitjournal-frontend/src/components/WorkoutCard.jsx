@@ -12,7 +12,7 @@ class WorkoutCard extends React.Component {
     render() {
         return (
             <div className="workout-card-container">
-            <h2>Giorno{this.props.index + 1} 🗓️</h2>
+            <h2>Giorno {this.props.index + 1} 🗓️</h2>
             {this.props.day.exercises.map(ex => (
             <>
                 <div className="esercizio">

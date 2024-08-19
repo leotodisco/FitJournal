@@ -10,3 +10,23 @@
 .titolo-profile-page {
     padding: 10px;
 }
+
+.profile-data-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #92B4A7; 
+    width: 120vh;
+    height: 60vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow-y: auto;  
+    align-items: center;
+    margin-top: 0;
+}
+

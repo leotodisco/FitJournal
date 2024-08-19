@@ -39,11 +39,36 @@ const ProfilePage = () => {
         return null;
     }
 
+    const deleteCookie = (name) => {
+        document.cookie = `${name}=; Max-Age=0; path=/;`;
+    };
+
+
+    const handleLogout = () => {
+        deleteCookie('user');
+        setUser(null);
+        navigate("/login")
+    };
+
+
     return(
         <div className='profile-page-container'>
             <div className='titolo-profile-page'>
                 <h2>Ciao, {user.name} 🤙🏻</h2>
             </div>
+
+            <div className='right-side-login-page'>
+                <div className='name-container'>
+                    <input type="text" className='fitJournalInput' placeholder="Nome" />
+                    <input type="text" className='fitJournalInput' placeholder="Cognome" />
+                </div>
+
+                <input type="text" className='fitJournalInput' placeholder="E-mail" />
+                <input type="password" className='fitJournalInput' placeholder="Password"/>
+
+                <button className='login-submit-button' onClick={handleLogout} >Logout</button>
+            </div>
+        
         </div>
     );
 }

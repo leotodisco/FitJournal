@@ -8,7 +8,13 @@ const CreaWorkoutPage = () => {
 
     return(
         <div className='crea-workout-page-container'>
-        CREA WORK
+            <div className='titolo-home-page'>
+                <h2>Tieniti in forma 💪🏻</h2>
+            </div>
+
+            <div className='workout-container'>
+
+            </div>
         </div>
     );
 }
